@@ -47,9 +47,40 @@ a {
   right: 10px;
   top: 14px;
 }
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #006699;
+}
+#footer .active a {
+  color: darkorange;
+}
+#footer a {
+  padding: 10px 0;
+  display: block;
+  color: white;
+  text-align: center;
+}
+#footer a i {
+  display: block;
+  font-size: 14px;
+}
+#footer a span {
+  display: block;
+  font-size: 12px;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  padding: 40px 0 50px;
+}
 main {
-  padding: 40px 0;
   background-color: #fff;
+  position: relative;
+  height: 100%;
 }
 main #nav {
   padding: 10px;
@@ -77,4 +108,65 @@ main #banner .right a {
 main #banner .right a img {
   width: 100%;
   height: 240px;
+}
+main #brand {
+  padding: 10px;
+}
+main #brand .brand-title img {
+  width: 100%;
+}
+main #brand .brand-content a {
+  display: block;
+}
+main #brand .brand-content a > img {
+  width: 100%;
+}
+main #sport .title img,
+main #women .title img,
+main #man .title img {
+  width: 100%;
+}
+main #sport .content,
+main #women .content,
+main #man .content {
+  padding: 10px 5px;
+}
+main #sport .content .mui-row > div,
+main #women .content .mui-row > div,
+main #man .content .mui-row > div {
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+main #sport .content .mui-row .product,
+main #women .content .mui-row .product,
+main #man .content .mui-row .product {
+  display: block;
+  text-align: center;
+  box-shadow: 0 0 5px #ccc;
+  padding: 10px 10px;
+}
+main #sport .content .mui-row .product .product-img img,
+main #women .content .mui-row .product .product-img img,
+main #man .content .mui-row .product .product-img img {
+  width: 100%;
+}
+main #sport .content .mui-row .product .product-title,
+main #women .content .mui-row .product .product-title,
+main #man .content .mui-row .product .product-title {
+  font-size: 14px;
+}
+main #sport .content .mui-row .product .price span,
+main #women .content .mui-row .product .price span,
+main #man .content .mui-row .product .price span {
+  color: red;
+}
+main #sport .content .mui-row .product .price del,
+main #women .content .mui-row .product .price del,
+main #man .content .mui-row .product .price del {
+  color: #ccc;
+}
+main #sport .content .mui-row .product .product-buy,
+main #women .content .mui-row .product .product-buy,
+main #man .content .mui-row .product .product-buy {
+  background-color: #006699;
 }

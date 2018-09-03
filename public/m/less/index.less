@@ -1,8 +1,17 @@
 @import 'base.less';
+body,html{
+    height: 100%;
+}
+body{
+    padding: 40px 0 50px;
+}
+
 // 轮播图
 main{
-    padding: 40px 0;
+    // padding: 40px 0;
     background-color: #fff;
+    position: relative;
+    height: 100%;
     // 导航区
     #nav{
         padding: 10px;
@@ -35,6 +44,67 @@ main{
                     height: 240px;
                 }
             }
+        }
+    }
+
+    //品牌区域
+    #brand{
+        padding:10px;
+        .brand-title{
+           img{
+            width: 100%;
+           }
+        }
+        .brand-content{
+            a{
+                display: block;
+                >img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    //商品区
+    #sport,#women,#man{
+        .title{
+            img{
+                width: 100%;
+            }
+        }
+        .content{
+            padding: 10px 5px;
+           .mui-row{
+               >div{  
+                   padding: 0 5px;
+                   margin-bottom: 10px;
+                }
+               .product{
+                   display: block;
+                   text-align: center;
+                   box-shadow: 0 0 5px #ccc;
+                   padding: 10px 10px;
+                   
+                   .product-img{
+                       img{
+                           width: 100%;
+                       }
+                   }
+                   .product-title{
+                    font-size: 14px;
+                   }
+                   .price{
+                       span{
+                           color: red;
+                       }
+                       del{
+                           color: #ccc;
+                       }
+                   }
+                   .product-buy{
+                       background-color: @mainColor;
+                   }
+               }
+           }
         }
     }
 }
