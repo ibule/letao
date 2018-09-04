@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>这是我的乐淘首页</title>
+    <!-- 移动端的视口： 让页面在移动端展示的时候不会缩放 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入站点图标  rel里面要知道icon表示引入文件是一个图标 href的路径就图标路径 -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- 1. 引入MUI的CSS包  提供基础的样式和组件-->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2. 引入字体图标的CSS包 提供了页面的图标 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入自己的样式文件（less）文件 注意rel="stylesheet/less"  提供页面的样式 -->
+    <link rel="stylesheet/less" href="less/search.less">
+    <!-- 4. 引入less的编译器文件less.js 这个less.js是需要编译Less来加载页面样式 优先引入让样式能够正常显示 用来编译less文件-->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 外面的大容器通常使用id 提示选择器优先级 区分每一块功能 -->
+    <!-- 1. 头部区域  -->
+    <header id="header">
+        <a href="category.html" class="icon_back fa fa-arrow-left" aria-hidden="true"></a>
+        <h4>搜索中心</h4>
+
+    </header>
+    <main id="main">
+        <div class="search">
+            <input class="search-text" type="text" placeholder="搜索你喜欢的商品">
+            <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+        </div>
+        <div class="history">
+            <div class="title mui-clearfix">
+                <span class="mui-pull-left">搜索历史</span>
+                <a href="#" class="mui-pull-right clearAll">
+                    <i class="icon_clear fa fa-trash"></i>
+                    <span>清空记录</span>
+                </a>
+            </div>
+            <div class="content">
+                <ul>
+                    <li class="mui-clearfix">
+                        <span class="mui-pull-left">鞋</span>
+                        <i class="icon_delete fa fa-close mui-pull-right"></i>
+                    </li>
+                    <li class="mui-clearfix">
+                        <span class="mui-pull-left">鞋</span>
+                        <i class="icon_delete fa fa-close mui-pull-right"></i>
+                    </li>
+                    <li class="mui-clearfix">
+                        <span class="mui-pull-left">鞋</span>
+                        <i class="icon_delete fa fa-close mui-pull-right"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <div class="mui-col-xs-3 active"><a href="#"><i class="fa fa-home"></i><span>首页</span></a></div>
+            <div class="mui-col-xs-3"><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></div>
+            <div class="mui-col-xs-3"><a href="#"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></div>
+            <div class="mui-col-xs-3"><a href="#"><i class="fa fa-user"></i><span>会员中心</span></a></div>
+        </div>
+    </footer>
+    <script id="historyTmp" type="text/html">
+     {{ if rows.length>0}}
+     <ul>
+        {{each rows}}
+       
+    <li class="mui-clearfix">
+            <span class="mui-pull-left">{{$value.search }}</span>
+            <i class="icon_delete fa fa-close mui-pull-right" data-id='{{$value.id }}' ></i>
+        </li>
+        
+    {{/each}}
+    <ul>
+    
+    {{else}}
+  
+     <p>没有历史搜索记录</p>
+
+     {{/if}}
+    
+</script>
+
+
+
+
+
+
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>

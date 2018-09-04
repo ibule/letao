@@ -1,9 +1,5 @@
-@mainColor:#006699;
-
-
-
+@mainColor: #006699;
 /* 样式初始化文件 */
-
 
 * {
     margin: 0px;
@@ -14,18 +10,15 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-
 li {
     list-style: none;
 }
-
 
 input {
     /* 去除输入框的内外边框 */
     border: 0;
     outline: 0;
 }
-
 
 img {
     /* 去掉图片的边框 */
@@ -34,59 +27,85 @@ img {
     vertical-align: middle;
 }
 
-
 a {
     color: #666;
     text-decoration: none;
 }
 
 //这是头部的公共样式
-#header{
+body,html{
+    height: 100%;
+}
+body{
+    padding: 45px 0 50px;
+}
+#header {
     width: 100%;
     height: 45px;
     position: fixed;
     top: 0;
-    background-color:@mainColor;
+    background-color: @mainColor;
     z-index: 999;
-    h4{
+    padding: 0 45px;
+    h4 {
         color: #ffffff;
         line-height: 45px;
         margin: 0;
         text-align: center;
+        font-weight: normal;
+       
     }
-    >a{
+    >a {
         color: #fff;
-     
-        &.fa-search{
-            position: absolute;
-            right: 10px;
-            top: 14px;
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 0;
+        font-size: 18px;
+        line-height: 45px;
+        text-align: center;
+        &.fa-search {
+            right: 0;
+        }
+        &.fa-arrow-left {
+            left: 0;
+        }
+    }
+    form {
+       line-height: 45px;
+        input {
+            width: 100%;
+            height: 30px;
+            margin: 0;
         }
     }
 }
+
 //这是底部
-#footer{
+#footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 50px;
     background-color: @mainColor;
-    .active{
-       a{
-        color: darkorange;
-       }
+    .active {
+        a {
+            color: darkorange;
+        }
     }
-    a{
-        padding: 7px 0;
+    a {
+        padding: 10px 0;
         display: block;
         color: white;
         text-align: center;
-        i{
+        i {
             display: block;
-            font-size: 14px;
+            font-size: 15px;
         }
-        span{
+        span {
             display: block;
             font-size: 12px;
+            padding: 3px 0;
         }
     }
 }

@@ -32,6 +32,7 @@ a {
   top: 0;
   background-color: #006699;
   z-index: 999;
+  padding: 0 45px;
 }
 #header h4 {
   color: #ffffff;
@@ -41,11 +42,27 @@ a {
 }
 #header > a {
   color: #fff;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  line-height: 45px;
+  text-align: center;
 }
 #header > a.fa-search {
-  position: absolute;
-  right: 10px;
-  top: 14px;
+  right: 0;
+}
+#header > a.fa-arrow-left {
+  left: 0;
+}
+#header form {
+  line-height: 45px;
+}
+#header form input {
+  width: 100%;
+  height: 30px;
+  margin: 0;
 }
 #footer {
   position: fixed;
@@ -57,7 +74,7 @@ a {
   color: darkorange;
 }
 #footer a {
-  padding: 10px 0;
+  padding: 7px 0;
   display: block;
   color: white;
   text-align: center;
@@ -69,13 +86,6 @@ a {
 #footer a span {
   display: block;
   font-size: 12px;
-}
-body,
-html {
-  height: 100%;
-}
-body {
-  padding: 40px 0 50px;
 }
 main {
   background-color: #fff;

@@ -15,14 +15,37 @@
 <body>
     <!-- 1. 头部区域  -->
     <header id="header">
-        <h4>乐淘云购</h4>
-        <a href="#" class="fa fa-search" aria-hidden="true"></a>
+        <a href="#" class="fa fa-arrow-left" aria-hidden="true">
+
+        </a>
+        <form action="">
+            <input type="text" placeholder="" 请输入品牌名称>
+        </form>
+        <a href="search.html" class="fa fa-search" aria-hidden="true">
+
+        </a>
     </header>
     <!-- 分类区域 -->
     <main id="main">
- 
-   
-                
+        <div class="category-left">
+            <ul>
+             
+            </ul>
+        </div>
+        <div class="category-right">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="mui-row">
+                       
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
 
     </main>
     <!-- 底部区域 -->
@@ -34,10 +57,30 @@
             <div class="mui-col-xs-3"><a href="#"><i class="fa fa-user"></i><span>会员中心</span></a></div>
         </div>
     </footer>
+    <script id="categoryTmp" type="text/html">
+        {{each rows}}
+    <li class="{{$index==0? 'active' : ''}}"><a href="#" data-id='{{$value.id}}'>{{ $value.categoryName }}</a></li>
+    {{/each}}
+</script>
 
-  
+    <script id="brandTmp" type="text/html">
+
+        {{if rows.length>0}}
+{{each rows}}
+        <div class="mui-col-xs-4">
+            <img src="{{ $value.brandLogo }}" alt="">
+            <p>{{$value.brandName }}</p>
+        </div>
+        {{/each}}
+        {{ else }}
+        <p>本页没有数据</p>
+        {{ /if }}
+
+</script>
+
     <script src="lib/mui/js/mui.js"></script>
     <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
     <script src="js/category.js"></script>
 </body>
 

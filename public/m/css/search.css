@@ -46,6 +46,7 @@ body {
   line-height: 45px;
   margin: 0;
   text-align: center;
+  font-weight: normal;
 }
 #header > a {
   color: #fff;
@@ -82,51 +83,67 @@ body {
   color: darkorange;
 }
 #footer a {
-  padding: 7px 0;
+  padding: 10px 0;
   display: block;
   color: white;
   text-align: center;
 }
 #footer a i {
   display: block;
-  font-size: 14px;
+  font-size: 15px;
 }
 #footer a span {
   display: block;
   font-size: 12px;
+  padding: 3px 0;
 }
 #main {
+  background-color: #fff;
   height: 100%;
-  display: flex;
-  background-color: #ccc;
 }
-#main .category-left > ul > li.active a {
-  background-color: #ccc;
-}
-#main .category-left > ul > li a {
-  color: black;
-  text-align: center;
-  height: 45px;
-  line-height: 45px;
-  display: block;
-  width: 80px;
-  font-size: 14px;
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-}
-#main .category-right {
-  flex: 1;
-  position: relative;
-}
-#main .category-right .mui-scroll {
-  min-height: 101%;
-}
-#main .category-right .mui-scroll .mui-row {
-  text-align: center;
+#main .search {
   padding: 10px;
-  background-clip: content-box;
-  background-color: #fff;
+  display: flex;
 }
-#main .category-right .mui-scroll .mui-row .mui-col-xs-4 img {
-  width: 100%;
+#main .search input {
+  flex: 1;
+  height: 30px;
+  font-size: 12px;
+  border: 1px solid #006699;
+  border-radius: 3px 0 0 3px;
+  margin-bottom: 0;
+}
+#main .search button {
+  height: 30px;
+  width: 60px;
+  line-height: 16px;
+  border: 1px solid #006699;
+  border-radius: 0 3px 3px 0;
+  font-size: 16px;
+  background-color: #006699;
+}
+#main .history .title {
+  padding: 0 10px 10px;
+  font-size: 12px;
+  color: #666;
+}
+#main .history .content {
+  padding: 0 10px;
+}
+#main .history .content > ul {
+  border: 1px solid #ccc;
+}
+#main .history .content > ul > li {
+  height: 30px;
+  line-height: 30px;
+  color: #666;
+  padding: 0 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+#main .history .content > ul > li:last-child {
+  border: none;
+}
+#main .history .content > ul > li i {
+  line-height: 30px;
 }

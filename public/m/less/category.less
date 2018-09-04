@@ -1,1 +1,54 @@
 @import 'base.less';
+#main {
+    height: 100%;
+    display: flex;
+    background-color: #ccc;
+    .category-left {
+        // width: 80px;
+        >ul {
+            >li {
+               &.active{
+                   a{
+                       background-color: #ccc;
+
+                   }
+               }
+                a {
+                    color: black;
+                    text-align: center;
+                    height: 45px;
+                    line-height: 45px;
+                    display: block;
+                    width: 80px;
+                    font-size: 14px;
+                    background-color: #fff;
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+        }
+    }
+    .category-right {
+        flex: 1;
+        position: relative;
+        .mui-scroll{
+            min-height: 101%;
+            .mui-row {
+                text-align: center;
+                padding: 10px;
+                // background-origin:content-box;
+                background-clip: content-box;
+                background-color: #fff;
+               
+                
+                .mui-col-xs-4{
+                   
+                    img {
+                        width: 100%;
+                    }
+                }
+              
+            }
+        }
+       
+    }
+}
